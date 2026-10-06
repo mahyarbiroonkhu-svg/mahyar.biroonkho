@@ -4,7 +4,7 @@ const COOKIE_NAME = "admin_session";
 const ADMIN_SESSION_TOKEN =
   process.env.ADMIN_SESSION_TOKEN || "mahyar-admin-session-v1";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // فقط مسیرهای ادمین (به جز صفحه ورود و API لاگین/لاگ‌اوت)
